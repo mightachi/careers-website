@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Open Positions{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Join Our Team</h1>
+    <p>We're looking for talented people to help us build the future.</p>
+</section>
+
+<section class="jobs-section">
+    <h2>Open Positions</h2>
+    <div class="jobs-grid">
+        {% for job in jobs %}
+        <div class="job-card">
+            <h3>{{ job.title }}</h3>
+            <p class="location">{{ job.location }}</p>
+            <p class="salary">{{ job.salary }}</p>
+            <a href="{{ url_for('job_detail', job_id=job.id) }}" class="btn">View Details</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background: #2c3e50;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.jobs-section h2 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.job-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.job-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.job-card .location {
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+
+.job-card .salary {
+    color: #27ae60;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #5a6fd6;
+}
+
+.btn-primary {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+}
+
+.job-detail {
+    max-width: 800px;
+}
+
+.back-link {
+    display: inline-block;
+    color: #667eea;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.job-detail h1 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.job-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.job-meta .location {
+    color: #666;
+}
+
+.job-meta .salary {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.job-description h2 {
+    color: #2c3e50;
+    margin: 1.5rem 0 0.75rem;
+}
+
+.job-description ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.job-description li {
+    margin-bottom: 0.5rem;
+}
+
+.not-found {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.not-found h1 {
+    margin-bottom: 1rem;
+}
+
+.not-found p {
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}

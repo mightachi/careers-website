@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ job.title if job else 'Not Found' }}{% endblock %}
+
+{% block content %}
+{% if job %}
+<section class="job-detail">
+    <a href="{{ url_for('home') }}" class="back-link">&larr; Back to all jobs</a>
+    <h1>{{ job.title }}</h1>
+    <div class="job-meta">
+        <span class="location">{{ job.location }}</span>
+        <span class="salary">{{ job.salary }}</span>
+    </div>
+    <div class="job-description">
+        <h2>About this role</h2>
+        <p>We are seeking a talented {{ job.title }} to join our growing team. This is an exciting opportunity to work on challenging problems and make a real impact.</p>
+        
+        <h2>Responsibilities</h2>
+        <ul>
+            <li>Collaborate with cross-functional teams</li>
+            <li>Deliver high-quality work on time</li>
+            <li>Contribute to team discussions and planning</li>
+            <li>Continuously learn and improve</li>
+        </ul>
+        
+        <h2>Requirements</h2>
+        <ul>
+            <li>Relevant experience in the field</li>
+            <li>Strong communication skills</li>
+            <li>Ability to work independently and in a team</li>
+            <li>Passion for excellence</li>
+        </ul>
+    </div>
+    <a href="mailto:careers@example.com?subject=Application for {{ job.title }}" class="btn btn-primary">Apply Now</a>
+</section>
+{% else %}
+<section class="not-found">
+    <h1>Job Not Found</h1>
+    <p>Sorry, the job you're looking for doesn't exist.</p>
+    <a href="{{ url_for('home') }}" class="btn">View All Jobs</a>
+</section>
+{% endif %}
+{% endblock %}
